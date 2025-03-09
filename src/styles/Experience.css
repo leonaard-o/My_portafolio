@@ -1,0 +1,245 @@
+:root {
+  --exp-color-1: white;
+  --exp-color-2: white;
+  --exp-color-3: wheat;
+  --exp-color-4: black;
+}
+
+#experience {
+  position: relative;
+  color: var(--exp-color-1);
+  text-align: left;
+  margin: 30px;
+  padding: 20px;
+  min-height: 70vh;
+  background-color: var(--exp-color-4);
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+.exp-title {
+  margin: 1em;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.1;
+}
+.xtra {
+  display: inline-block;
+  font-size: small;
+  font-weight: 100;
+  padding-left: 10px;
+}
+.exp-timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+  background-color: var(--exp-color-4);
+  list-style: none;
+}
+
+.exp-timeline:before {
+  background-color: var(--exp-color-1);
+  content: '';
+  margin-left: 40px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+.exp-timeline-event {
+  position: relative;
+}
+
+.exp-timeline-event:hover .exp-timeline-event-icon {
+  transform: rotate(-45deg);
+  background-color: var(--exp-color-3);
+}
+
+.exp-timeline-event:hover .exp-timeline-event-thumbnail {
+  box-shadow: inset 40em 0 0 0 var(--exp-color-1);
+}
+.exp-timeline-event:hover .job-title {
+  color: var(--exp-color-3);
+}
+
+.exp-timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+  padding-top: 25px;
+}
+
+.exp-timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+
+.exp-timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.exp-timeline-event-copy strong {
+  font-weight: 700;
+}
+
+.exp-timeline-event-copy p:not(.exp-timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.exp-timeline-event-icon {
+  transition: transform 0.2s ease-in;
+  transform: rotate(45deg);
+  background-color: var(--exp-color-3);
+  outline: 10px solid var(--exp-color-4);
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.exp-timeline-event-thumbnail {
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: var(--exp-color-4);
+  font-size: 0.75em;
+  background-color: var(--exp-color-3);
+  box-shadow: inset 0 0 0 0em #ef795a;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+@media screen and (max-width: 798px) {
+  #experience {
+    color: var(--exp-color-1);
+    text-align: left;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 0px;
+    min-height: 70vh;
+    width: 90%;
+    overflow: hidden;
+    
+  }
+  .exp-title {
+    margin: 1em;
+    font-size: 2.5em;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.1;
+  }
+  .job-title {
+    margin: 0;
+  }
+  .xtra {
+    display: inline-block;
+    font-size: small;
+    font-weight: 100;
+    padding-left: 10px;
+  }
+  .exp-timeline {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--exp-color-4);
+    list-style: none;
+  }
+  
+  .exp-timeline:before {
+    background-color: var(--exp-color-1);
+    content: '';
+    margin-left: 0px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
+  }
+  
+  .exp-timeline-event {
+    position: relative;
+  }
+  .exp-timeline-event h4 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .exp-timeline-event:hover .exp-timeline-event-icon {
+    transform: rotate(-45deg);
+    background-color: var(--exp-color-3);
+  }
+  
+  .exp-timeline-event:hover .exp-timeline-event-thumbnail {
+    box-shadow: inset 40em 0 0 0 var(--exp-color-1);
+  }
+  
+  .exp-timeline-event-copy {
+    padding: 0;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    padding-top: 25px;
+  }
+  
+  .exp-timeline-event-copy h3 {
+    font-size: 1.75em;
+  }
+  
+  .exp-timeline-event-copy h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  
+  .exp-timeline-event-copy strong {
+    font-weight: 700;
+    padding-right: 5px;
+  }
+
+  .exp-timeline-event-copy div ul li {
+    display: flex;
+    padding-right: 5px;
+    flex-wrap: wrap;
+    list-style: square;
+  }
+  
+  .exp-timeline-event-copy p:not(.exp-timeline-event-thumbnail) {
+    padding-bottom: 1.2em;
+  }
+  
+  .exp-timeline-event-icon {
+    transition: transform 0.2s ease-in;
+    transform: rotate(45deg);
+    background-color: var(--exp-color-3);
+    outline: 10px solid var(--exp-color-4);
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+  }
+  
+  .exp-timeline-event-thumbnail {
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: var(--exp-color-4);
+    font-size: 0.75em;
+    background-color: var(--exp-color-3);
+    box-shadow: inset 0 0 0 0em #ef795a;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+  }
+}

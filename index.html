@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="./src/assets/main.png" as="image">
+
+    <meta property="og:title" content="Leonardo Gaona" />
+    <meta property="og:url" content="https://akshay-rajan.github.io/" />
+    <meta property="og:image" content="https://akshay-rajan.github.io/leaves.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Software Developer, Trivandrum, Kerala." />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PBL1Y971DG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PBL1Y971DG');
+    </script>
+
+    <title>Leonardo Gaona</title>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <div id="preloader" className="loader" style="display: flex; justify-content: center; align-items: center; position: fixed; background-color: black; width: 100vw; height: 100vh; margin: 0; padding: 0; overflow: hidden;">
+      <img src="src/assets/loader.gif" alt="Loading..." style="width: 50px;height: 50px; margin: 0; padding: 0;" />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

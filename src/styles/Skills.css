@@ -1,0 +1,104 @@
+.skill-container {
+    display: block;
+    font: monospace;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+
+  
+
+  
+  
+  
+  }
+  
+  .pie-div {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px ;
+    background-color: salmon;
+
+}
+  .pie-div svg {
+    overflow: visible;
+    margin-left: 5em;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+ 
+}
+  
+  .pie-info {
+    flex: 5;
+    display: flex;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    margin: 15px 35px 0 0;
+    opacity: 0.8;
+    text-align: left;
+    padding: 1rem;
+    max-height: 330px;
+    border-radius: 10px;
+    background-color: rgb(85, 42, 42);
+  }
+  
+  @media screen and (max-width: 798px) {
+    .pie-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 95vw;
+     
+  
+    }
+    .skill-container {
+        display: block;
+        font: monospace;
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        text-orientation: var(45deg);
+       
+}
+      .pie-div {
+        width: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:20px ;
+        background-color: salmon;
+      
+    }
+    .pie-div svg {
+        overflow: visible;
+        margin-left: 4em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+     
+    }
+    .pie-info {
+        flex: 5;
+        display: flex;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        margin: 0px 0px 0 0;
+        opacity: 0.8;
+        text-align: left;
+        padding: 0rem;
+        max-height: 330px;
+        border-radius: 10px;
+        background-color: rgb(85, 42, 42);
+      }
+  }
+  

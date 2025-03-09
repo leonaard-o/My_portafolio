@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700");
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: white;
+  background-color: black;
+  transition: background-color 1s;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0 !important;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-weight: 500;
+  color: wheat;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: wheat;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.background-animation {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+/* ===========================boton animado */
+.contenedorbotonright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+  height: 4rem;
+  margin-top: 5em;
+}
+
+.contenedorbotonleft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8%;
+  height: 4rem;
+  margin-top: 5em;
+}
+
+.button-negro1-7 {
+  background-image: linear-gradient(50deg, #3b0066, rgb(30, 0, 255), #00ddff);
+  border-radius: 100%;
+  padding: 9px;
+
+  transition: 0.5s;
+  border: solid 3px #ffd100;
+}
+
+.button-negro1-7-3 {
+  display: none;
+  background-image: linear-gradient(50deg, #3b0066, rgb(30, 0, 255), #00ddff);
+  border-radius: 100%;
+  padding: 9px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: solid 3px #ffd100;
+}
+
+.mayor3-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 100%;
+}
+
+.fa {
+  animation: mover 1s infinite alternate;
+  color: aqua;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+.button-negro1-7:hover,
+.button-negro2-7 :hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #008cff;
+}
+
+/* ===================================== */
+
+@media screen and (max-width: 798px) {
+  #root {
+    margin: 0;
+    padding: 2px;
+  }
+}
+
+/* ? Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ! PROJECTS */
+#projects {
+  background-color: "transparent";
+}
+#projects.focused {
+  background-color: "transparent";
+  color: rgb(255, 255, 255);
+}
+
+.project-wrapper {
+  margin: 1em;
+}
+
+.project-header {
+  padding: 30px 30px 0;
+  text-align: center;
+}
+
+.project-header__title {
+  margin: 1em;
+  font-size: 2.5em;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 1;
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 50px 0;
+  z-index: 1;
+}
+
+.project-card-div {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+.project-card-div.fadeIn {
+  opacity: 1;
+}
+
+.project-card.left {
+  flex: 1;
+  float: left;
+  display: block;
+  text-align: right;
+}
+.project-card.right {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  float: right;
+  display: block;
+  text-align: left;
+}
+
+.project-image {
+  width: 500px;
+  pointer-events: none;
+  height: auto;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__year,
+.card__cometOuter,
+.card__circle,
+.card__smallCircle,
+.card__orangeShine,
+.card__greenShine,
+.card__thankyou,
+.card__outer-year {
+  position: absolute;
+  pointer-events: none;
+}
+
+.card__greenShine {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 10%;
+  top: 0;
+  bottom: 0;
+  width: 450px;
+  z-index: 1;
+}
+
+.card__thankyou {
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 100;
+  left: 4%;
+  bottom: 20%;
+  z-index: 2;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.project-stack img {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 20px;
+}
+.project-desc {
+  margin: 20px;
+}
+.project-btns {
+  margin: 10px;
+}
+.project-button {
+  background-color: wheat;
+  color: black;
+  margin: 10px;
+  border: 1px solid black;
+}
+.project-button:hover {
+  background-color: black;
+  color: wheat;
+}
+.project-button::after {
+  background-color: black;
+  color: wheat;
+  border: 1px solid wheat;
+}
+
+.focused .navigation-links {
+  color: white !important;
+}
+
+@media screen and (max-width: 798px) {
+  .project-cards {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .wrapper img {
+    width: 100%;
+  }
+  .card__thankyou {
+    left: 0;
+    position: inherit;
+  }
+  .project-header__title {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  /* =================== */
+  .contenedorboton1 {
+    background-color: 1e2b4e;
+    width: 100%;
+    display: flex;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    justify-content: center;
+    align-items: end;
+    height: 3rem;
+  }
+
+  .texto2-7-3 .texto2-7-3 {
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: wheat;
+    width: 60%;
+    margin-left: 4rem;
+    height: 100%;
+  }
+
+  .boton-negro1-7 {
+    background-color: 10c716;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 40%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    height: 7.5rem;
+  }
+
+  .button-negro1-7 {
+    display: none;
+    background-image: linear-gradient(50deg, #3b0066, rgb(30, 0, 255), #00ddff);
+    border-radius: 100%;
+    padding: 9px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: solid 3px #ffd100;
+  }
+
+  .button-negro1-7-3 {
+    display: flex;
+  }
+
+  .mayor1-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* /padding: 16px 24px;/ */
+    border-radius: 100%;
+    box-shadow: 0px 10px 80px 0px #22a75d;
+    color: #22a75d;
+  }
+
+  @keyframes mover {
+    0% {
+      transform: translatey(0);
+    }
+
+    100% {
+      transform: translatey(10px);
+    }
+  }
+}

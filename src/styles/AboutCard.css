@@ -1,0 +1,101 @@
+.about-card-container {
+    font-size: 15px;
+    padding: 15px;
+    padding-top: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: left;
+    display: block;
+  
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
+  
+    background: linear-gradient(0deg, rgb(26, 1, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+  
+    border: 0.1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    transition: 0.5s all;
+  }
+  .about-card-active {
+    font-size: 15px;
+    padding: 15px;
+    padding-top: 15px;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: left;
+    display: block;
+    background-color: black;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: attr(width) / attr(height);
+  
+    background: linear-gradient(0deg, rgb(20, 20, 20) 0%, rgba(0, 0, 0, 0.5) 100%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+  
+    transition: 0.5s all;
+    border: 1px solid wheat;
+    border-radius: 10px;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    filter: brightness(1.2); 
+  }
+  .about-card-container::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #ffffff08;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: .7s all;
+  }
+  
+  .about-card-container:hover {
+    border: 1px solid wheat;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    filter: brightness(1.3);
+  }
+  
+  .about-card-container:hover::before {
+    filter: brightness(.5);
+    top: -100%;
+    left: 200%;
+  }
+  .card-item {
+    display: inline;
+    font: monospace;
+    color: white;
+    font-size: 15px;
+    margin: 2px;
+    margin-top: 5px;
+    opacity: 0.8;
+  }
+  .points {
+      color: white;
+      font-size: 15px;
+      margin-top: 5px;
+      opacity: 0.8;
+  }
+  
+  @media screen and (max-width: 798) {
+    .about-card-container {
+      font-size: 15px;
+      margin-left: 0;
+      text-align: left;
+      display: block;
+      background-color: black;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: attr(width) / attr(height);
+      background: #000;
+      border: 0.1px solid rgb(100, 100, 100);
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+  

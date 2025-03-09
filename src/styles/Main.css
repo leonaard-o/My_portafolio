@@ -1,0 +1,162 @@
+#home {
+    margin: 0;
+    padding: 0;
+    
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  .marquee {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    opacity: 0.9;
+  }
+  .marquee span {
+    display: inline-block;
+    color: white;
+    font-size: 200px;
+    height: 60vh;
+    animation: marquee 19s linear infinite;
+    padding: 40px;
+    z-index: 4;
+    margin-top: 0px;
+   
+    
+  }  
+  .m1 {
+    display: inline-block;
+    padding: 0 20px 0 0;
+  }
+  .m2 {
+    animation-delay: 19s;
+    padding: 0 400px 0 0;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    } 100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  
+  /* Animation */
+  /* Dat.GUI override to prevent labels from scaling unnecessarily
+    Replaces float-based layout with flex layout. */
+  .dg .cr > div {
+    display: flex;
+    
+    > .c,
+    > .property-name {
+      float: none;
+      clear: none;
+    }
+    
+    > .property-name {
+      width: 100px;
+    }
+    
+    > .c {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-grow: 1;
+      width: 100%;
+      
+      > .slider {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+      }
+      
+      input[type=text] {
+        width: 40px;
+        margin-left: 6px;
+      }
+    }
+  }
+  
+  .name-intro.imgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    opacity: 1;
+    overflow: hidden;
+    opacity: 1;
+  }
+  .main-img {
+    height: 70vh;
+    position: fixed;
+    margin-right:15em ;
+     
+    bottom: 0;
+    border-image:fill;
+    
+    
+  }
+  
+  @media screen and (max-width: 798px) {
+    #home {
+      display: flex;
+      width: auto;
+      height: 70vh;
+    
+      justify-content: center;
+      
+    }
+    .name-container {
+      width: 75vw;
+    
+      height: 50vh;
+   
+     
+  
+  
+    }
+    .marquee {
+      text-align: top;
+      flex-direction: column;
+      margin: 0px;
+      padding: 0px;
+    
+    }
+   
+    .marquee span {
+      display: inline-block;
+      color: white;
+      font-size: 50px;
+      height: 60vh;
+      width: auto;
+      animation: marquee 12s linear infinite;
+      padding: 15px;
+      padding-top: 10px;
+      z-index: 4;
+      margin-top: 1em;
+     
+    }  
+    .name-intro.imgDiv {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+      overflow: hidden;
+    }
+    .main-img {
+      position: relative;
+      width: 100vw;
+      margin-top: 15vh;
+      height: 50vh;
+      margin-right:10em ;
+    }
+  }
