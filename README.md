@@ -1,6 +1,4 @@
-# Personal Website
 
-![Thumbnail](thumbnail.png)
 
 Built using 
 
@@ -13,9 +11,4 @@ Built using
 ![Static Badge](https://img.shields.io/badge/-Material_UI-skyblue?style=for-the-badge&logo=mui)
 
 
-> Inspirations taken from [Github](https://github.com/), portfolios of various designers, [CodePen](https://codepen.io/) etc.
 
-<!--
-BADGES: https://shields.io/
-ICONS: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
- -->
