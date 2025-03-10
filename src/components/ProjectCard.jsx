@@ -45,8 +45,8 @@ const ProjectCard = ({ project, index }) => {
           </span>
         </button>
         <button className="button-negro1-7-3">
-          <span className="mayor3-2">
-          <ChevronDownIcon sx={{ fontSize: "5px" }} className="fa" />
+          <span className="mayor3-2-down">
+          <ChevronDownIcon sx={{ fontSize: "20px" }} className="fa" />
           </span>
         </button>
       </div>
@@ -69,8 +69,8 @@ const ProjectCard = ({ project, index }) => {
           </span>
         </button>
         <button className="button-negro1-7-3">
-          <span className="mayor3-2">
-          <ChevronDownIcon sx={{ fontSize: "5px" }} className="fa" />
+          <span className="mayor3-2-down">
+          <ChevronDownIcon sx={{ fontSize: "20px" }} className="fa" />
           </span>
         </button>
       </div>

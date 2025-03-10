@@ -102,12 +102,7 @@ button:focus-visible {
 
 .button-negro1-7-3 {
   display: none;
-  background-image: linear-gradient(50deg, #3b0066, rgb(30, 0, 255), #00ddff);
-  border-radius: 100%;
-  padding: 9px;
-  cursor: pointer;
-  transition: 0.5s;
-  border: solid 3px #ffd100;
+ 
 }
 
 .mayor3-2 {
@@ -175,6 +170,7 @@ button:focus-visible {
 
 .project-wrapper {
   margin: 1em;
+ 
 }
 
 .project-header {
@@ -194,6 +190,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   opacity: 1;
+  
 }
 
 .project-card {
@@ -201,7 +198,7 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 0 50px 0;
+  margin: 0 0 15px 0;
   z-index: 1;
 }
 
@@ -284,6 +281,7 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
 }
 .project-stack img {
   padding: 10px;
@@ -295,6 +293,9 @@ button:focus-visible {
   font-weight: 500;
   line-height: 1.1;
   margin: 20px;
+ 
+
+
 }
 .project-desc {
   margin: 20px;
@@ -327,9 +328,12 @@ button:focus-visible {
     display: block;
     max-width: 100%;
     overflow: hidden;
+   
   }
   .wrapper img {
     width: 100%;
+
+    
   }
   .card__thankyou {
     left: 0;
@@ -345,41 +349,36 @@ button:focus-visible {
     line-height: 1.1;
   }
   /* =================== */
-  .contenedorboton1 {
-    background-color: 1e2b4e;
+  .contenedorbotonright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    display: flex;
-    margin-top: 0rem;
-    margin-right: 0rem;
-    margin-left: 0rem;
-    justify-content: center;
-    align-items: end;
-    height: 3rem;
+    height: 4rem;
+    margin-top: 0em;
+   
   }
-
-  .texto2-7-3 .texto2-7-3 {
-    display: flex;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: wheat;
-    width: 60%;
-    margin-left: 4rem;
-    height: 100%;
-  }
-
-  .boton-negro1-7 {
-    background-color: 10c716;
+  .contenedorbotonleft {
     display: flex;
     justify-content: center;
-    align-items: start;
-    width: 40%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    height: 7.5rem;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0em;
+   
   }
+
+
+
+
+
 
   .button-negro1-7 {
     display: none;
+
+  }
+  .button-negro1-7-3 {
+    display: flex;
     background-image: linear-gradient(50deg, #3b0066, rgb(30, 0, 255), #00ddff);
     border-radius: 100%;
     padding: 9px;
@@ -388,32 +387,21 @@ button:focus-visible {
     border: solid 3px #ffd100;
   }
 
-  .button-negro1-7-3 {
-    display: flex;
-  }
-
-  .mayor1-2 {
+  .mayor3-2-down{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 1.2rem;
+    background-color: #000000;
+    font-size: 1.5rem;
     font-weight: bold;
     width: 1.5rem;
     height: 1.5rem;
-    /* /padding: 16px 24px;/ */
+  
     border-radius: 100%;
-    box-shadow: 0px 10px 80px 0px #22a75d;
-    color: #22a75d;
+  }
+ .fa {
+    rotate: 90deg;
   }
 
-  @keyframes mover {
-    0% {
-      transform: translatey(0);
-    }
-
-    100% {
-      transform: translatey(10px);
-    }
-  }
+ 
 }
