@@ -78,7 +78,7 @@ const BackgroundAnimation = () => {
     };
 
     function animate() {
-      $.fillStyle = `rgba(0,0,0, .2)`;
+      $.fillStyle = `rgba(0,0,0, .6)`;
       $.fillRect(0, 0, width, height);
       particles.forEach((p) => {
         p.draw();
