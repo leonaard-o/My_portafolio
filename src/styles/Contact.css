@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+  
 }
 .icon {
   display: inline-block;
@@ -21,6 +22,7 @@
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
+  
 }
 .contact-title {
   font-size: 2.5em;
@@ -34,10 +36,12 @@
   align-items: center;
   margin: 1em;
   text-align: right;
+  
 }
 .contact-info div {
   margin: 0;
   width:  60px;
+
 }
 .contact-info a {
   color: wheat;
@@ -54,6 +58,7 @@
   /* overflow: hidden; */
   padding: 0;
   text-align: right;
+
 }
 .contact-form-f {
   width: 40vw;
@@ -123,7 +128,7 @@
   align-items: center;
 }
 .mylinks {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(101, 94, 94, 0.05);
   color: white;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -132,6 +137,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
 }
 @media screen and (max-width: 798px) {
   #contact {

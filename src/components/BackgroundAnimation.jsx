@@ -1,11 +1,12 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const BackgroundAnimation = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const { random, atan2, cos, sin, hypot } = Math;
-    const max = 200;
+    // Reducido de 200 a 100 partículas
+    const max = 50;
     const canvas = canvasRef.current;
     const $ = canvas.getContext('2d');
     const body = document.body;
@@ -28,7 +29,8 @@ const BackgroundAnimation = () => {
         this.size = this.random(1, 5);
         this.x = this.random(0, width);
         this.y = this.random(0, height);
-        this.velocity = this.size * .5;
+        // Velocidad inicial reducida: antes era this.size * 0.5, ahora es * 0.25 (la mitad)
+        this.velocity = this.size * 0.25;
         this.changed = null;
         this.changedFrame = 0;
         this.maxChangedFrames = 50;
@@ -43,23 +45,25 @@ const BackgroundAnimation = () => {
       },
       update() {
         if (this.changed) {
-          this.alpha *= .92;
+          this.alpha *= 0.92;
           this.size += 2;
           this.changedFrame++;
           if (this.changedFrame > this.maxChangedFrames) {
             this.reset();
           }
-        } else if (this.distance(point.x, point.y) < 50) {
+        } else if (this.distance(point.x, point.y) < 40) {
           this.changed = true;
         } else {
           let dx = point.x - this.x;
           let dy = point.y - this.y;
           let angle = atan2(dy, dx);
 
-          this.alpha += .01;
+          this.alpha += 0.01;
+          // Movimiento basado en la velocidad actual
           this.x += this.velocity * cos(angle);
           this.y += this.velocity * sin(angle);
-          this.velocity += .02;
+          // Aceleración reducida: antes se aumentaba en 0.02, ahora en 0.01 (la mitad)
+          this.velocity += 0.00;
         }
       },
       reset() {
@@ -71,7 +75,7 @@ const BackgroundAnimation = () => {
       random(min, max) {
         return random() * (max - min) + min;
       }
-    }
+    };
 
     function animate() {
       $.fillStyle = `rgba(0,0,0, .2)`;
@@ -79,7 +83,7 @@ const BackgroundAnimation = () => {
       particles.forEach((p) => {
         p.draw();
       });
-      hue += .3;
+      hue += 0.3;
       window.requestAnimationFrame(animate);
     }
 
@@ -112,7 +116,7 @@ const BackgroundAnimation = () => {
     setup();
 
     return () => {
-      // Clean up the canvas and event listeners when the component unmounts
+      // Limpia los event listeners al desmontar el componente
       canvas.removeEventListener("mousemove", touches);
       canvas.removeEventListener("touchmove", touches);
       canvas.removeEventListener("mouseleave", () => {
