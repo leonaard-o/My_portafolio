@@ -82,7 +82,7 @@ export default function About() {
     window.addEventListener("resize", handleResize); 
     // Cleanup on component unmount
     return () => window.removeEventListener("resize", handleResize); 
-  }, []);
+  },[]);
 
   const [isExpanded, setExpanded] = useState(false);
 

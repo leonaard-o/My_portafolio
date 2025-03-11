@@ -5,9 +5,50 @@
   top: 0;
   width: 100%;
   z-index: 2;
-  
- 
 }
+
+.small-language-button {
+    font-size: 0.60em;
+    padding: 5px 10px;
+    margin-left: 3em;
+    background-color: wheat;
+    color: black;
+    
+  }
+  
+  .full-language-button {
+    font-size: 0.75em;
+    padding: 8px 29px;
+    width: auto; /* O el tamaño que quieras */
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  
+
+#language-button  {
+    display: flex;
+    justify-content: center;
+ 
+
+  width: 40%;
+
+  
+  font-weight: 700;
+
+  border: 2px solid wheat;
+
+
+}
+#language-button:hover{
+  background-color:tan;
+  color: black;
+ 
+  
+}
+
+
+  
+
 .myheader:hover {
   opacity: 1;
 }
@@ -115,7 +156,7 @@
   order: -1;
   opacity: 0;
   color: wheat;
-  vertical-align: top ;
+  vertical-align: top;
   font-size: 12px;
   padding: 4px;
   margin-right: 10px;
@@ -123,6 +164,12 @@
 }
 .scrolled .navigation-links a svg:hover + .help {
   opacity: 1;
+}
+.scrolled .small-language-button {
+  display:flex;
+  background-color: black;
+  color: white;
+
 }
 
 .scrolled .navigation-links a {
@@ -139,7 +186,7 @@
   background-color: transparent;
   transition: background-color 0.5s;
 }
-.scrolled .navigation-links a svg {
+.scrolled .navigation-links .small-language-button  a svg {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
@@ -147,9 +194,15 @@
   color: tan;
 }
 
+
 .light .navigation-links a {
   color: wheat;
 }
+.light .small-language-button {
+    background-color: wheat;
+    color: black;
+}
+
 .light .navigation-links a svg {
   background-color: transparent;
 }
@@ -180,7 +233,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; 
+    position: fixed;
     top: 0; /* Ensure it starts from the top */
     left: 0; /* Ensure it starts from the left */
     right: 0; /* Ensure it stretches to the right */
@@ -216,8 +269,13 @@
     width: 250px;
     height: 50px;
     border-radius: 15px;
+    border: 2px solid wheat;
     background-color: #1a1a1a;
     color: wheat;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
   }
   .mobile-navbar.open ul li .nav-resume-link:hover {
     border: 1px solid wheat;
@@ -236,16 +294,16 @@
     width: auto;
     animation: revSlideIn 1s forwards;
   }
-  
+
   @keyframes revSlideIn {
     from {
-        width: 0;
+      width: 0;
     }
     to {
-        width: 70%;
+      width: 70%;
     }
   }
-  
+
   .resume-link-li {
     justify-content: center;
     align-items: center;
@@ -255,5 +313,14 @@
     border-radius: 15px;
     background-color: #1a1a1a;
     color: wheat;
+  }
+  .español {
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+  }
+  #language-boton {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid wheat;
   }
 }

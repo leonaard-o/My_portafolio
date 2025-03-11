@@ -5,11 +5,13 @@ import EduBlock from "./EduBlock";
 import SvgComponent1 from "./SvgComponent1";
 import SvgComponent2 from "./SvgComponent2";
 import PropTypes from "prop-types";
+import useStore from "../useStore/useStore";
 
 export default function Education(props) {
+    const { language } = useStore();
   const container = {
     display: 'block',
-    font: `monospace`,
+    font: "monospace",
     position: 'relative',
     width: '100%',
     margin: '10px',
@@ -17,14 +19,14 @@ export default function Education(props) {
   };
   const title = {
     display: 'flex',
-    font: `monospace`,
+    font: "monospace",
     color: 'white',
     fontSize: '30px',
     textAlign: 'left',
     fontWeight: 'bold',
   };
   const eduData = {
-    font: `monospace`,
+   font: "monospace",
     color: 'white',
     fontSize: '15px',
     margin: '15px 35px 0 0',
@@ -47,8 +49,10 @@ export default function Education(props) {
   return (
     <>
       <div style={container}>
-        <div style={title}>
-          <div>Education</div>
+        <div style={title}>{language === 'en' ? 'Education' : 'Educación'}
+       
+
+          
           <div className="close-btn" onClick={() => props.setExpanded(false)}><CloseIcon /></div>
         </div>
         <div style={eduData}>

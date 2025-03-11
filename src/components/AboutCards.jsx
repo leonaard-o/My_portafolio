@@ -9,8 +9,10 @@ import Achievements from "./Achievements";
 import Certifications from "./Certifications";
 import AboutCard from "./AboutCard";
 import PropTypes from 'prop-types';
+import useStore from "../useStore/useStore";
 
 export default function AboutCards({ isExpanded, setExpanded }) {
+    const { language } = useStore();
   const education = {
     title: "Education",
     description: "Colleges, Schools, and Degrees",
@@ -143,7 +145,6 @@ export default function AboutCards({ isExpanded, setExpanded }) {
 
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div ref={topElement} style={container}>
       <div
@@ -157,26 +158,27 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         }
         onMouseLeave={() => setExpanded(false)}
       >
-        {hovering == "Education" && (
+        {hovering == (language === "en" ? "Education" : "Educación") && (
           <Education {...education} setExpanded={setExpanded} />
         )}
-        {hovering == "Skills" && (
-          <Skills {...Skills} setExpanded={setExpanded} />
+        {hovering == (language === "en" ? "Skills" : "Habilidades") && (
+          <Skills {...skills} setExpanded={setExpanded} />
         )}
-        {hovering == "Achievements" && (
+        {hovering == (language === "en" ? "Achievements" : "Logros") && (
           <Achievements {...achievements} setExpanded={setExpanded} />
         )}
-        {hovering == "Certifications" && (
+        {hovering == (language === "en" ? "Certifications" : "Certificaciones") && (
           <Certifications setExpanded={setExpanded} />
         )}
       </div>
-
+  
       <div
         style={window.innerWidth < 798 ? smallWidth.cards : cards}
         className="more-details"
       >
         <AboutCard
           {...education}
+          title={language === "en" ? "Education" : "Educación"}
           isExpanded={isExpanded}
           setExpanded={setExpanded}
           setHovering={setHovering}
@@ -184,6 +186,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         />
         <AboutCard
           {...skills}
+          title={language === "en" ? "Skills" : "Habilidades"}
           isExpanded={isExpanded}
           setExpanded={setExpanded}
           setHovering={setHovering}
@@ -191,6 +194,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         />
         <AboutCard
           {...certifications}
+          title={language === "en" ? "Certifications" : "Certificaciones"}
           isExpanded={isExpanded}
           setExpanded={setExpanded}
           setHovering={setHovering}
@@ -198,6 +202,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         />
         <AboutCard
           {...achievements}
+          title={language === "en" ? "Achievements" : "Logros"}
           isExpanded={isExpanded}
           setExpanded={setExpanded}
           setHovering={setHovering}
@@ -206,8 +211,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
       </div>
     </div>
   );
-}
-
+}  
 
 
 AboutCards.propTypes = {

@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import './App.css'
 import Header from './components/Header'
 import BackgroundAnimation from './components/BackgroundAnimation'
+// import { useStore } from 'zustand'
 
 // Carga diferida de componentes no críticos
 const Main = lazy(() => import('./components/Main'))
@@ -11,6 +12,7 @@ const Experience = lazy(() => import('./components/Experience'))
 const Contact = lazy(() => import('./components/Contact'))
 
 function App() {
+    // const { language, toggleLanguage } = useStore();
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
@@ -40,6 +42,9 @@ function App() {
           <div style={{ color: 'wheat', zIndex: 20, fontSize: 10 }}>
             Last Updated: 08/2024
           </div>
+          {/* <button onClick={toggleLanguage}>
+          {language === "en" ? "Switch to Spanish" : "Switch to English"}
+        </button> */}
         </>
       )}
     </>

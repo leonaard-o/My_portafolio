@@ -6,10 +6,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import "../styles/Skills.css";
 
 import Pie from "./Pie";
+import useStore from "../useStore/useStore";
 
 
 
 export default function Skills(props) {
+    const { language } = useStore();
   const title = {
     display: 'flex',
     font: `monospace`,
@@ -82,8 +84,8 @@ export default function Skills(props) {
   return (
     <>
       <div className="skill-container">
-        <div style={title}>
-          <div>Skills</div>
+        <div style={title}>{language === 'en' ? 'Skills' : 'Habilidades'}
+          <div></div>
           <div className="close-btn" onClick={() => props.setExpanded(false)}><CloseIcon /></div>
         </div>
         <div style={window.innerWidth < 798 ? small.skillData : skillData}>
@@ -97,6 +99,7 @@ export default function Skills(props) {
                   
                   {item.logo && <img src={item.logo} alt="" style={{ width: '20px', height: '20px', marginRight: '5px' }} />}
                   {item.name}
+                  
                   
                 </div>
               ))}

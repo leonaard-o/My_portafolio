@@ -9,8 +9,10 @@ import ContactLinks from './ContactLinks';
 // import CodeIcon from '@mui/icons-material/Code';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import useStore from "../useStore/useStore";
 
 const Contact = () => {
+    const { language } = useStore();
 
   return (
     <div className="contact" id="contact">
@@ -19,7 +21,7 @@ const Contact = () => {
 
       <div className="contact-container">
         
-        <div className="contact-title">Contact Me</div>
+        <div className="contact-title">{language === "es" ? "Contacto" : "Contact"}</div>
 
         <div className="contact-row">
           <div className="contact-col-1"></div>

@@ -25,7 +25,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scroll": "^1.9.0",
-    "stage-js": "^1.0.0-alpha.2"
+    "stage-js": "^1.0.0-alpha.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
