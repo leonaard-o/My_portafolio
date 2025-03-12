@@ -1,7 +1,10 @@
 
 import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
-import { Tooltip } from "@nextui-org/tooltip";
+
+import AnimatedProfileImage from "./AnimateProfile";
+
+
 
 export default function AboutProfile() {
   const flexLeft = {
@@ -25,19 +28,20 @@ export default function AboutProfile() {
       
     },
     dp: {
-        textAlign: 'center',
-        borderRadius: '100%',
-        border: '1px solid wheat',
-        width: '50vw', // Ancho relativo al viewport (50% del ancho de la pantalla)
-        height: '50vw', // Altura igual al ancho para mantener la forma circular
-        maxWidth: '200px', // Límite máximo para pantallas grandes
-        maxHeight: '200px', // Límite máximo para pantallas grandes
-        margin: '0 auto',
+        // textAlign: 'center',
+        // borderRadius: '100%',
+        // border: '1px solid wheat',
+        // width: '50vw', // Ancho relativo al viewport (50% del ancho de la pantalla)
+        // height: '50vw', // Altura igual al ancho para mantener la forma circular
+        // maxWidth: '200px', // Límite máximo para pantallas grandes
+        // maxHeight: '200px', // Límite máximo para pantallas grandes
+        marginLeft: '0em',
        
-        objectFit: 'cover',
+        // objectFit: 'cover',
       
        
-        background: '#ffffff',
+        // background: '#ffffff',
+       
        
     },
     details: {
@@ -59,6 +63,7 @@ export default function AboutProfile() {
       color: 'white',
       fontSize: '25px',
       fontWeight: 'bold',
+      marginTop: '5em',
     },
     desc: {
       textAlign: 'left',
@@ -101,21 +106,22 @@ export default function AboutProfile() {
   const smallScreen = {
     ...flexLeft,
     dp: {
-        textAlign: 'center',
-        borderRadius: '100%',
-        border: '1px solid wheat',
-        width: '50vw', // Ancho relativo al viewport (50% del ancho de la pantalla)
-        height: '50vw', // Altura igual al ancho para mantener la forma circular
-        maxWidth: '100px', // Límite máximo para pantallas grandes
-        maxHeight: '100px', // Límite máximo para pantallas grandes
-        margin: '0 auto',
+        // textAlign: 'center',
+        // borderRadius: '100%',
+        // border: '1px solid wheat',
+        // width: '50vw', // Ancho relativo al viewport (50% del ancho de la pantalla)
+        // height: '50vw', // Altura igual al ancho para mantener la forma circular
+        // maxWidth: '100px', // Límite máximo para pantallas grandes
+        // maxHeight: '100px', // Límite máximo para pantallas grandes
+        // margin: '0 auto',
        
-        objectFit: 'contain',
+        // objectFit: 'contain',
        
-        background: '#ffffff',
+        // background: '#ffffff',
     },
     imgContainer: {
       margin: 0,
+     
     },
     container: {
       ...flexLeft.container,
@@ -123,6 +129,7 @@ export default function AboutProfile() {
       margin: '2px',
       padding: '10px',
       borderRadius: '1.5rem 1.5rem 0 0',
+    
     },
     details: {
       ...flexLeft.details,
@@ -145,11 +152,11 @@ export default function AboutProfile() {
 
   return (
     <>
+    
       <div style={window.innerWidth < 798 ? smallScreen.container : flexLeft.container}>
         <div style={window.innerWidth < 798 ? smallScreen.imgContainer : flexLeft.imgContainer}>
-          <Tooltip content="👽️" showArrow={true} placement="right-end" color="foreground" offset={-100} >
-            <img src={dp} style={window.innerWidth < 798 ? smallScreen.dp : flexLeft.dp} alt="display picture" />
-          </Tooltip>
+       
+            <AnimatedProfileImage src={dp} style={window.innerWidth < 798 ? smallScreen.dp : flexLeft.dp} alt="display picture" />
         </div>
         <div>
           <div style={window.innerWidth < 798 ? smallScreen.details : flexLeft.details}>

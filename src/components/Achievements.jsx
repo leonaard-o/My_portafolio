@@ -45,4 +45,5 @@ export default function Achievements(props) {
 Achievements.propTypes = {
   isExpanded: PropTypes.bool.isRequired,
   setExpanded: PropTypes.func.isRequired,
+  content: PropTypes.array.isRequired
 };
