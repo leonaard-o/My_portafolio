@@ -4,7 +4,7 @@ import useStore from "../useStore/useStore";
 export default function ContactForm() {
   const { language } = useStore();
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzks4jFjaFkVQEuvAHol0hJmw86jni2yFubSw-wmSZtgIViK-Kb7VwTFXWA0bfBXng/exec";
+    "https://script.google.com/macros/s/AKfycbyJS4ZdkBYb0jduPQck3Cof0yxwk5oiCrJQosLWobUZhUwQftP44uZpfasRSLP0fhYThw/exec";
   const formRef = useRef(null);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
@@ -76,38 +76,41 @@ export default function ContactForm() {
         name="submit-to-google-sheet"
       >
         <div className="form-group">
-        <input
-  type="text"
-  id="name"
-  name="Name"
-  placeholder={language?.toLowerCase() === "es" ? "Nombre" : "Name"}
-  className="form-control"
-  required
-/>
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            placeholder={language?.toLowerCase() === "es" ? "Nombre" : "Name"}
+            className="form-control"
+            required
+          />
 
-<input
-  type="email"
-  id="email"
-  name="Email"
-  placeholder={language?.toLowerCase() === "es" ? "Correo electrónico" : "Email"}
-  className="form-control"
-  required
-/>
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder={
+              language?.toLowerCase() === "es" ? "Correo electrónico" : "Email"
+            }
+            className="form-control"
+            required
+          />
 
-<textarea
-  id="message"
-  name="Message"
-  placeholder={
-    language?.toLowerCase() === "es" ? "Escribe tu mensaje" : "Enter your message"
-  }
-  className="form-control"
-  required
-></textarea>
+          <textarea
+            id="message"
+            name="Message"
+            placeholder={
+              language?.toLowerCase() === "es"
+                ? "Escribe tu mensaje"
+                : "Enter your message"
+            }
+            className="form-control"
+            required
+          ></textarea>
 
-<button type="submit" className="btn btn-dark" id="send-msg">
-  {language?.toLowerCase() === "es" ? "Enviar" : "Send"}
-</button>
-
+          <button type="submit" className="btn btn-dark" id="send-msg">
+            {language?.toLowerCase() === "es" ? "Enviar" : "Send"}
+          </button>
         </div>
 
         {alertMessage && (
