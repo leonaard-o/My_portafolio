@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 const BackgroundAnimation = () => {
   const canvasRef = useRef(null);
@@ -8,19 +8,19 @@ const BackgroundAnimation = () => {
     // Reducido de 200 a 100 partículas
     const max = 50;
     const canvas = canvasRef.current;
-    const $ = canvas.getContext('2d');
+    const $ = canvas.getContext("2d");
     const body = document.body;
     const particles = [];
 
     body.style.backgroundColor = "transparent";
     // body.style.overflow = "hidden";
 
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
     let point = { x: width / 2, y: height / 2 };
     let hue = 0;
 
-    function Particle() { };
+    function Particle() {}
 
     Particle.prototype = {
       init() {
@@ -37,7 +37,9 @@ const BackgroundAnimation = () => {
         return this;
       },
       draw() {
-        $.strokeStyle = `hsla(${Math.random() * 10 + 50}, 100%, 50%, ${this.alpha})`;
+        $.strokeStyle = `hsla(${Math.random() * 10 + 50}, 100%, 50%, ${
+          this.alpha
+        })`;
         $.beginPath();
         $.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         $.stroke();
@@ -63,7 +65,7 @@ const BackgroundAnimation = () => {
           this.x += this.velocity * cos(angle);
           this.y += this.velocity * sin(angle);
           // Aceleración reducida: antes se aumentaba en 0.02, ahora en 0.01 (la mitad)
-          this.velocity += 0.00;
+          this.velocity += 0.0;
         }
       },
       reset() {
@@ -74,7 +76,7 @@ const BackgroundAnimation = () => {
       },
       random(min, max) {
         return random() * (max - min) + min;
-      }
+      },
     };
 
     function animate() {

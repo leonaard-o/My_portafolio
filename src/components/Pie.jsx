@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts";
 
-
 export default function Pie({ setInfo }) {
   const data = [
     {
@@ -110,15 +109,14 @@ export default function Pie({ setInfo }) {
       ],
     },
     {
-        id: 2,
-        value: 33,
-        name: "DevOps",
-        skills: [
-          {
-            name: "Linux",
-            logo:
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png",
-          },
+      id: 2,
+      value: 33,
+      name: "DevOps",
+      skills: [
+        {
+          name: "Linux",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png",
+        },
 
         {
           name: "Docker",
@@ -175,7 +173,6 @@ export default function Pie({ setInfo }) {
             fill: "blue",
             fontSize: 12,
             fontWeight: "bold",
-            
           },
         }}
         tooltip={{ enabled: false }}

@@ -85,6 +85,6 @@ export default function Certifications(props) {
       </div>
     </>
   );
-};
+}
 
 Certifications.propTypes = { setExpanded: PropTypes.func };

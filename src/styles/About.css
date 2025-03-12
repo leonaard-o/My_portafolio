@@ -1,166 +1,165 @@
 #about {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20;
+  left: 90%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.close-btn:hover {
+  color: wheat;
+  padding-left: 3px;
+}
+
+/* Education */
+.svg-edu {
+  display: flex;
+}
+
+/* Achievements */
+
+.achievements-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achievement-card {
+  margin: 5px;
+  border-radius: 0px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.achievement-card:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.achievement-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+.achievement-card:hover:before {
+  transform: translateX(-100%);
+}
+.achievement-card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+.achievement-card:hover:after {
+  transform: translateX(100%);
+}
+
+/* Certificate */
+
+.certification-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.card {
+  overflow: hidden;
+  position: relative;
+  height: 160px;
+  width: 210px;
+  text-align: center;
+  margin: 5px;
+  padding: 3px;
+}
+.card-content {
+  padding: 5px;
+  padding-bottom: 0;
+  margin: 0px;
+  overflow: visible;
+}
+.card__side {
+  height: auto;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front-1 {
+  background-image: url(../assets/certificate_bg.png);
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card__side--back {
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.card__side--back-1 {
+  background: white;
+}
+
+.card:hover .card__side--front-1 {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+@media (max-width: 798px) {
+  .card {
+    height: 180px;
+    width: 250px;
+    margin: 2px;
+    margin-left: 20px;
+    padding: 3px;
+    font-size: 12px;
   }
-  
   .close-btn {
     position: absolute;
     top: 20;
-    left: 90%;
+    left: 80%;
     color: white;
     cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   }
-  .close-btn:hover {
-    color: wheat;
-    padding-left: 3px;
-  }
-  
-  /* Education */
   .svg-edu {
-    display: flex;
+    display: block;
   }
-  
-  /* Achievements */
-  
-  .achievements-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;  
-  }
-  
-  .achievement-card {
-    margin: 5px;
-    border-radius: 0px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-  }
-  .achievement-card:hover {
-    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  .achievement-card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    z-index: 1;
-  }
-  .achievement-card:hover:before {
-    transform: translateX(-100%);
-  }
-  .achievement-card:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    z-index: 1;
-  }
-  .achievement-card:hover:after {
-    transform: translateX(100%);
-  }
-  
-  /* Certificate */
-  
-  .certification-card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-family:'Times New Roman', Times, serif;
-    font-weight: bold;
-  }
-  .card {
-    overflow: hidden;
-    position: relative;
-    height: 160px;
-    width: 210px;
-    text-align: center;
-    margin: 5px;
-    padding: 3px;
-  }
-  .card-content {
-    padding: 5px;
-    padding-bottom: 0;
-    margin: 0px;
-    overflow: visible;
-  }
-  .card__side {
-    height: auto;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  }
-  .card__side--front-1 {
-    background-image:  url(../assets/certificate_bg.png);
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; 
-  }
-  .card__side--back {
-    margin: 0;
-    padding: 0;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-  .card__side--back-1 {
-    background: white;
-  }
-  
-  .card:hover .card__side--front-1 {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-  }
-  
-  .card:hover .card__side--back {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  @media (max-width: 798px) {
-    .card {
-      height: 180px;
-      width: 250px;
-      margin: 2px;
-      margin-left: 20px;
-      padding: 3px;
-      font-size: 12px;
-    }
-    .close-btn {
-      position: absolute;
-      top: 20;
-      left: 80%;
-      color: white;
-      cursor: pointer;
-    }
-    .svg-edu {
-      display: block;
-    }
-  }
-  
+}

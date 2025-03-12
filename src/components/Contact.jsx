@@ -1,27 +1,25 @@
-
-
 import "../styles/Contact.css";
 
-import ContactForm from './ContactForm';
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ContactLinks from './ContactLinks';
+import ContactForm from "./ContactForm";
+import EmailIcon from "@mui/icons-material/Email";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ContactLinks from "./ContactLinks";
 // import CodeIcon from '@mui/icons-material/Code';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import useStore from "../useStore/useStore";
 
 const Contact = () => {
-    const { language } = useStore();
+  const { language } = useStore();
 
   return (
     <div className="contact" id="contact">
-      
       <ContactLinks />
 
       <div className="contact-container">
-        
-        <div className="contact-title">{language === "es" ? "Contacto" : "Contact"}</div>
+        <div className="contact-title">
+          {language === "es" ? "Contacto" : "Contact"}
+        </div>
 
         <div className="contact-row">
           <div className="contact-col-1"></div>
@@ -42,10 +40,10 @@ const Contact = () => {
                 <LocationOnIcon />
               </a>
             </div>
-            {window.innerWidth < 798 && 
+            {window.innerWidth < 798 && (
               <>
                 <div>
-                  <a href="https://github.com/leonaard-o" >
+                  <a href="https://github.com/leonaard-o">
                     <GitHubIcon />
                   </a>
                 </div>
@@ -55,16 +53,14 @@ const Contact = () => {
                   </a>
                 </div> */}
               </>
-            }
+            )}
           </address>
         </div>
-        
-        <ContactForm />
-        
-        </div>
 
+        <ContactForm />
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default Contact;

@@ -2,17 +2,16 @@ import { useState, useRef, useEffect } from "react";
 
 // import PropTypes from 'prop-types';
 
-
 import Education from "./Education";
 import Skills from "./Skills";
 import Achievements from "./Achievements";
 import Certifications from "./Certifications";
 import AboutCard from "./AboutCard";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import useStore from "../useStore/useStore";
 
 export default function AboutCards({ isExpanded, setExpanded }) {
-    const { language } = useStore();
+  const { language } = useStore();
   const education = {
     title: "Education",
     description: "Colleges, Schools, and Degrees",
@@ -167,11 +166,12 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         {hovering == (language === "en" ? "Achievements" : "Logros") && (
           <Achievements {...achievements} setExpanded={setExpanded} />
         )}
-        {hovering == (language === "en" ? "Certifications" : "Certificaciones") && (
+        {hovering ==
+          (language === "en" ? "Certifications" : "Certificaciones") && (
           <Certifications setExpanded={setExpanded} />
         )}
       </div>
-  
+
       <div
         style={window.innerWidth < 798 ? smallWidth.cards : cards}
         className="more-details"
@@ -211,10 +211,9 @@ export default function AboutCards({ isExpanded, setExpanded }) {
       </div>
     </div>
   );
-}  
-
+}
 
 AboutCards.propTypes = {
   isExpanded: PropTypes.bool.isRequired,
-  setExpanded: PropTypes.func.isRequired
+  setExpanded: PropTypes.func.isRequired,
 };
