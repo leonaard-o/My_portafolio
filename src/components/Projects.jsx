@@ -77,7 +77,7 @@ const Projects = () => {
         "https://media.licdn.com/dms/image/v2/D5612AQHJKVf2i9XXzw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697159715452?e=2147483647&v=beta&t=tUo-unXI10uaTYlxsE9Vhyo61FHww88zvRvz-hKCb_g",
       ],
       github: "https://github.com/leonaard-o/vehiculos_rent",
-      live: 'https://vehiculos-rent-dkqx.vercel.app/',
+      live: 'https://vehiculosrent.vercel.app/',
     },
     {
       id: 3,

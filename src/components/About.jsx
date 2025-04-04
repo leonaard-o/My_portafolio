@@ -88,6 +88,8 @@ export default function About() {
   // * Change the background color to white and move the navbar
   // * when the about section is at the top of the viewport
   useEffect(() => {
+
+    
     const handleScroll = () => {
       const aboutSection = document.getElementById("about");
       const body = document.body;
